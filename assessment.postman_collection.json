@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "4aab1a80-93b6-40bb-bb90-95ae00600def",
+		"name": "assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Search policy by username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/search?username=Lura Lucca",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Lura Lucca"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload CSV",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/jashwin/Public/insuredmine/data-sheet.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:7000/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Message Job",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\": \"Hello\",\n    \"timestamp\": \"2021-09-12T21:16:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/create-job",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"create-job"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Policies by user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/policies",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"policies"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
